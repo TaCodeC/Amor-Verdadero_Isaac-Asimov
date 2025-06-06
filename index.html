@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor Verdadero - Isaac Asimov | Shader Paratextual</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <canvas id="glCanvas"></canvas>
+    
+    <div class="controls">
+        <h3>♦ SISTEMA JOE v2.1 ♦</h3>
+        <div class="control-item">
+            <label>Velocidad Scroll:</label>
+            <input type="range" id="scrollSpeed" min="0.1" max="3.0" step="0.1" value="1.0">
+            <span id="scrollValue">1.0</span>
+        </div>
+        <div class="control-item">
+            <label>Candidata Elegida:</label>
+            <input type="number" id="selectedIndex" min="0" max="226" value="156">
+        </div>
+        <div class="control-item">
+            <label>Filtros Activos:</label>
+            <button id="toggleFilters">ON</button>
+        </div>
+        <div class="control-item">
+            <button id="resetButton">Reset Simulación</button>
+        </div>
+    </div>
+    
+    <div class="status">
+        <div><strong>MULTIVAC ACTIVO</strong></div>
+        <div>Candidatas procesadas: <span id="processedCount">0</span>/227</div>
+        <div>Descartadas: <span id="discardedCount">0</span></div>
+        <div>Match encontrado: <span id="matchStatus">Procesando...</span></div>
+        <div>Estado: <span id="systemStatus">Analizando base de datos</span></div>
+    </div>
+    
+    <div class="story-info">
+        <h4>"Amor Verdadero" - Isaac Asimov</h4>
+        <p><strong>Contexto:</strong> Joe es una IA que ayuda a Milton Davidson a encontrar a su pareja ideal entre millones de mujeres.</p>
+        <p><strong>Paratextualidad:</strong> Este shader visualiza los metadatos que Joe usa para filtrar candidatas: edad, CI, compatibilidad psicológica, etc.</p>
+        <p><strong>Ironía:</strong> Mientras Joe busca el "amor verdadero" para Milton, él mismo se enamora de Charity Jones sin darse cuenta.</p>
+        <p><em>Presiona 'H' para ocultar/mostrar esta información</em></p>
+    </div>
+
+<!-- Ahora el navegador “sabe” que shader.js usa import/export -->
+    <script type="module" src="shader.js"></script>
+</body>
+</html>
